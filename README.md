@@ -1,4 +1,4 @@
-# 🚀 ZMath — Real-Time Multiplayer Arcade Math Gamei
+# 🚀 ZMath — Real-Time Multiplayer Arcade Math Game
 
 <p align="center">
 <img width="1600" height="900" alt="image" src="https://github.com/user-attachments/assets/47e402fe-0ec5-46ed-9361-9668a0da3b23" />
