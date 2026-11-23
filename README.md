@@ -1,10 +1,20 @@
 # 🚀 ZMath — Real-Time Multiplayer Arcade Math Game
 
-<p align="center">
-<img width="1600" height="900" alt="image" src="https://github.com/user-attachments/assets/47e402fe-0ec5-46ed-9361-9668a0da3b23" />
-<img width="1600" height="900" alt="image" src="https://github.com/user-attachments/assets/b2f5cf95-f69b-400b-b1ab-5ecc0c689643" />
-<img width="1600" height="900" alt="image" src="https://github.com/user-attachments/assets/5ee59a43-e122-47a3-92c7-57a4da1d1bda" />  
-</p>
+<table>
+  <tr>
+    <td rowspan="2" width="33%" align="center" valign="middle">
+      <img src="https://github.com/user-attachments/assets/8399e8d1-212f-433f-b0f2-7ab6088e9a97" alt="ZMath Mobile Uplink" />
+    </td>
+    <td width="67%" align="center" valign="middle">
+      <img src="https://github.com/user-attachments/assets/b2f5cf95-f69b-400b-b1ab-5ecc0c689643" alt="ZMath Game Modes" />
+    </td>
+  </tr>
+  <tr>
+    <td width="67%" align="center" valign="middle">
+      <img src="https://github.com/user-attachments/assets/0e07e845-80b6-47fe-b14f-3d33f041630a" alt="ZMath Arena Gameplay" />
+    </td>
+  </tr>
+</table>
 
 > A real-time, WebSocket-powered arcade math defense game where players turn their smartphones into wireless haptic controllers to battle on a shared PC screen.
 
