@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>zMath Lobby</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/CSS/style.css">
+    <link rel="stylesheet" href="/CSS/lobby.css">
+</head>
+<body>
+    <div id="pageWrapper">
+        <div id="instructionBox">AWAITING 2 OPERATORS TO INITIALIZE...</div>
+        <div id="qrCodeBox">
+            <h2 id="info">Scan this QR code to participate</h2>
+            <div id="qrCodeImage">
+                <img src="" alt="QR Code">
+            </div>
+            <h3 id="url"></h3>
+
+        </div>
+        <div id="waitingForPlayers">
+        </div>
+        <div id="startBtnBox">
+            <a href="#">Start Game</a>
+        </div>
+    </div>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/JS/lobby.js"></script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ZMath</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/CSS/zMath.css">
+  </head>
+  <body>
+    <div id="startScreen">
+      <div id="startScreenWrapper">
+        <h1 id="startH1">zMath</h1>
+        <p id="startText">Caution: This game is not easy as appear!</p>
+        <button id="startBtn">Start Game</button>
+      </div>
+    </div>
+    <div id="gameOver" class="displayNone">
+      <div id="gameOverWrapper">
+        <h1 id="gameOverH1">Game Over</h1>
+        <h2 id="score" class="sameText">Score: 100</h2>
+          <button id="playAgain">Play Again</button>
+      </div>
+    </div>
+    <canvas id="gameCanvas"></canvas>
+    <div id="answerInputBoxWrapper">
+      <div id="solo" class="players displayNone">
+        <input type="text" id="soloInputField" class="answerInputBox" autocomplete="off">
+      </div>
+    </div>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/JS/zMath.js"></script>
+  </body>
+</html>

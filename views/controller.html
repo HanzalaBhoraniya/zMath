@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <title>ZMath Controller</title>
+    <style>
+      /* A super quick barebones style for testing. We will make it neon later! */
+      body {
+        background-color: #111;
+        color: #0f0;
+        font-family: monospace;
+        text-align: center;
+      }
+      .keypad {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+        padding: 20px;
+        max-width: 400px;
+        margin: 0 auto;
+      }
+      button {
+        background: #222;
+        color: #0f0;
+        border: 2px solid #0f0;
+        padding: 20px;
+        font-size: 24px;
+        cursor: pointer;
+        border-radius: 10px;
+      }
+      button:active {
+        background: #0f0;
+        color: #000;
+      }
+      .displayNone {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>REMOTE UPLINK</h1>
+
+    <div class="keypad" id="keypad">
+      <button data-key="1">1</button>
+      <button data-key="2">2</button>
+      <button data-key="3">3</button>
+      <button data-key="4">4</button>
+      <button data-key="5">5</button>
+      <button data-key="6">6</button>
+      <button data-key="7">7</button>
+      <button data-key="8">8</button>
+      <button data-key="9">9</button>
+      <button data-key="-">-</button>
+      <button data-key="0">0</button>
+      <button data-key="Del">Del</button>
+    </div>
+    <button
+      data-key="Enter"
+      style="width: 80%; max-width: 360px; margin-top: 10px"
+    >
+      FIRE (ENTER)
+    </button>
+    <div id="gotScoreBox" class="displayNone">
+      <h1>You got the Score</h1>
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+      const myName = localStorage.getItem("operatorName");
+      const gotScoreText = document.querySelector("#gotScoreBox h1");
+      // 2. Connect to the Switchboard
+      const socket = io();
+
+      // 3. Listen for clicks on ANY button
+      const buttons = document.querySelectorAll("button");
+      buttons.forEach((button) => {
+        button.addEventListener("click", () => {
+          const key = button.getAttribute("data-key");
+            if (navigator.vibrate) {
+              navigator.vibrate(40); // A quick, satisfying 40ms mechanical tap
+          }
+          // 4. Throw the ball to the server!
+          socket.emit("key_pressed", { username: myName, key: key });
+        });
+      });
+      socket.on("vibrate_controller", (payload) => {
+        if (myName === payload.username) {
+          if (payload.type === "hit") {
+            navigator.vibrate(50); // A quick, sharp 50-millisecond buzz
+          } else if (payload.type === "miss") {
+            navigator.vibrate([100, 50, 100]);
+          }
+        }
+      });
+    </script>
+  </body>
+</html>

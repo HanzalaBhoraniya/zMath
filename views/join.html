@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>ZMath - Mobile Uplink</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Orbitron:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/CSS/style.css"> <link rel="stylesheet" href="/CSS/join.css">  </head>
+<body>
+    <div id="mobileContainer">
+        <h1 id="mobileTitle">ZMATH UPLINK</h1>
+        
+        <div id="joinForm">
+            <input type="text" id="usernameInput" placeholder="Enter Operator Name" autocomplete="off" maxlength="12">
+            <button id="joinBtn">INITIATE UPLINK</button>
+        </div>
+
+        <div id="waitingMessage" class="displayNone">
+            <div id="radarScanner"></div>
+            <p class="hackerText">> UPLINK SECURED.</p>
+            <p class="hackerText">> WAITING FOR HOST PC TO INITIATE MATCH...</p>
+        </div>
+        <p class="hackerText displayNone" id="lobbyFull">Sorry, the lobby is full...</p>
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/JS/join.js"></script>
+</body>
+</html>

@@ -1,0 +1,70 @@
+#mainH1 {
+    font-size: 150px;
+    font-family: orbitron;
+    font-weight: 900;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 0px;
+    text-shadow: 0 0 12px #00FF00;
+}
+#description {
+    font-family: monospace;
+    font-size: 20px;
+    text-align: center;
+    margin: 0;
+}
+body {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400'%3E%3Cg stroke='%2300FF00' stroke-width='1.5' fill='none' stroke-opacity='0.15'%3E%3Cpath d='M 0,50 L 100,50 L 120,70 L 280,70 L 300,50 L 400,50'/%3E%3Ccircle cx='100' cy='50' r='3' fill='%2300FF00' fill-opacity='0.15'/%3E%3Ccircle cx='300' cy='50' r='3' fill='%2300FF00' fill-opacity='0.15'/%3E%3Cpath d='M 0,150 L 40,150 L 60,130 L 140,130 L 160,150 L 240,150 L 260,170 L 340,170 L 360,150 L 400,150'/%3E%3Ccircle cx='40' cy='150' r='2'/%3E%3Ccircle cx='160' cy='150' r='2'/%3E%3Ccircle cx='240' cy='150' r='2'/%3E%3Ccircle cx='360' cy='150' r='2'/%3E%3Cpath d='M 200,0 L 200,30 L 180,50'/%3E%3Cpath d='M 200,400 L 200,370 L 220,350 L 220,250 L 240,230 L 240,150'/%3E%3Ccircle cx='240' cy='230' r='3'/%3E%3Cpath d='M 0,350 L 80,350 L 100,330 L 300,330 L 320,350 L 400,350'/%3E%3Ccircle cx='80' cy='350' r='3' fill='%2300FF00' fill-opacity='0.15'/%3E%3Ccircle cx='320' cy='350' r='3' fill='%2300FF00' fill-opacity='0.15'/%3E%3C/g%3E%3C/svg%3E");
+    overflow: hidden;
+}
+.gameModes {
+    display: flex;
+    flex-direction: row;
+    background-color: black;
+    height: 170px;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #00FF00;
+    border-radius: 5px;
+    box-shadow: 
+    0 0 15px -5px #00FF00, 
+    0 0 15px -7px #00FF00 inset;
+    transition: 0.1s ease-in;
+    cursor: pointer;
+}
+.cardText {
+    margin-left: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    height: 60px;
+}
+.gameModes:hover {
+    background-color: #00FF00;
+    color: black;
+}
+.gameModes .cardText h2 {
+    font-family: monospace;
+    margin: 0;
+    font-size: 30px;
+}
+.gameModes .cardText p {
+    font-family: monospace;
+    margin: 0;
+    font-size: 17px;
+}
+#gameModeWrapper {
+    width: 75vw;
+    margin: 0 auto;
+    /* background-color: yellow; */
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 15px;
+}
+#keyboard {
+    grid-area: 1/1/2/4;
+    /* background-color: blue; */
+}
